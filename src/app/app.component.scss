@@ -1,0 +1,21 @@
+@import 'helpers/mixins';
+
+.phd {
+  background-color: black;
+  color: white;
+  padding: 2em;
+  height: 8em;
+}
+
+@include tablet {
+  .phd {
+    height: 10em;
+    padding-top: 4em;
+  }
+}
+
+@include mobile {
+  .phd {
+    text-align: center;
+  }
+}

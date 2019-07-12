@@ -1,0 +1,143 @@
+@import '../../helpers/mixins';
+
+.row {
+  background-color: $color-red;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+}
+
+li {
+  padding: .5em;
+  text-transform: uppercase;
+}
+
+.one {
+  grid-column: 1/2;
+
+  a {
+    padding-left: 1em;
+  }
+}
+
+.two {
+  grid-column: 2/3;
+}
+
+.tree {
+  grid-column: 3/4;
+}
+
+.four {
+  grid-column: 4/5;
+}
+
+.five {
+  grid-column: 5/6;
+}
+
+.six {
+  grid-column: 8/9;
+}
+
+.seven {
+  grid-column: 9/10;
+}
+
+.logo {
+  position: absolute;
+  border: 3px solid black;
+  right: 43%;
+  width: 15em;
+
+  img {
+    border: 3px solid #ab170f;
+    width: 100%;
+  }
+}
+
+.fa-bars {
+  color: white;
+}
+
+.mini-nav {
+  display: none;
+}
+
+@include tablet {
+  .logo {
+    right: 2em;
+    top: -200%;
+  }
+
+  .six {
+    grid-column: 6/7;
+  }
+
+  .seven {
+    grid-column: 7/8;
+  }
+}
+
+@include mobile {
+  nav {
+    display: grid;
+    grid-template-rows: 40% 60%;
+
+    ul {
+      display: none;
+      border: none;
+      grid-row: 2/3;
+      li {
+        text-align: center;
+      a{
+        padding-left: 0;
+      }
+    }
+  }
+    .mini-nav {
+      display: block;
+      grid-row: 2/3;
+      width: 20%;
+      position: relative;
+      top: 70px;
+      background-color: $color-red;
+      border: 0;
+      left: 40%;
+    }
+
+    &:hover ul {
+      display: block;
+    }
+
+    &:hover .mini-nav {
+      display: none;
+    }
+    &:hover .logo {
+      top: 5px;
+    }
+
+    .logo {
+      position: relative;
+      top: 5em;
+      right: 0;
+      width: 100%;
+      height: 20em;
+      border: none;
+      grid-row: 1/2;
+
+      img {
+        height: 20em;
+        border: 3px solid black;
+      }
+    }
+  }
+}

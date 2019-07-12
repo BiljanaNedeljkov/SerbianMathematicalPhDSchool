@@ -1,0 +1,114 @@
+@import "variables";
+
+// RESET
+
+@mixin reset {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        box-sizing: border-box;
+        // font
+        font-family: $font;
+    }
+    
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+}
+
+// DISPLAY
+
+@mixin flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// TRANSITION
+
+@mixin transition($type, $time, $effect){
+    transition: $type $time $effect;
+    -webkit-transition: $type $time $effect;
+    -moz-transition: $type $time $effect;
+    -ms-transition: $type $time $effect;
+    -o-transition: $type $time $effect;
+}
+
+// CLEARFIX
+
+@mixin clearfix{
+    &:before, &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// POSITION ABSOLUTE
+
+@mixin position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin positionX($left, $self){
+    position: absolute;
+    left: ($left);
+    -webkit-transform: translateX($self);
+    -ms-transform: translateX($self);
+    transform: translateX($self);
+}
+
+@mixin positionY($top, $self){
+    position: absolute;
+    top: ($top);
+    -webkit-transform: translateY($self);
+    -ms-transform: translateY($self);
+    transform: translateY($self);
+}
+
+
+// OBJECT FIT
+
+@mixin object-fit($fit, $postion) {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: $fit;
+    object-fit: $fit;
+    -o-object-position: ($postion);
+    object-position: ($postion);
+}
+
+
+// MEDIA QUERY'S
+
+
+
+@mixin tablet {
+    @media (max-width: #{$tablet-width - 1px}){
+      @content;
+    }
+}
+
+@mixin mobile{
+    @media (max-width: #{$mobile-width - 1px}){
+        @content;
+    }
+}
