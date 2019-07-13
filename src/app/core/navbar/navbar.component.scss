@@ -13,43 +13,57 @@ ul {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
-}
 
-li {
-  padding: .5em;
-  text-transform: uppercase;
-}
-
-.one {
-  grid-column: 1/2;
-
-  a {
-    padding-left: 1em;
+  li {
+    padding: .5em;
+    text-transform: uppercase;
   }
-}
 
-.two {
-  grid-column: 2/3;
-}
+  .one {
+    grid-column: 1/2;
 
-.tree {
-  grid-column: 3/4;
-}
+    a {
+      padding-left: 1em;
+    }
+  }
 
-.four {
-  grid-column: 4/5;
-}
+  .two {
+    grid-column: 2/3;
+  }
 
-.five {
-  grid-column: 5/6;
-}
+  .tree {
+    grid-column: 3/4;
+    display: grid;
+    grid-template-rows: 20% 80%;
 
-.six {
-  grid-column: 8/9;
-}
 
-.seven {
-  grid-column: 9/10;
+    .modules {
+      border-top: 2px solid white;
+      width: 19em;
+      text-transform: capitalize;
+    }
+
+    &:hover .dropdown-content {
+      display: block;
+
+    }
+  }
+
+  .four {
+    grid-column: 4/5;
+  }
+
+  .five {
+    grid-column: 5/6;
+  }
+
+  .six {
+    grid-column: 8/9;
+  }
+
+  .seven {
+    grid-column: 9/10;
+  }
 }
 
 .logo {
@@ -71,6 +85,34 @@ li {
 .mini-nav {
   display: none;
 }
+
+
+.dropdown-content {
+
+  background-color: $color-red;
+  display: none;
+  position: absolute;
+  top: 4.5em;
+
+  .analysis {
+    padding: 1em;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .algebra {
+    padding: 1em;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
 
 @include tablet {
   .logo {
@@ -96,13 +138,35 @@ li {
       display: none;
       border: none;
       grid-row: 2/3;
+
       li {
         text-align: center;
-      a{
-        padding-left: 0;
+        border-bottom: 1px dotted white;
+        width: 60%;
+
+        .dropdown-content {
+          // display: block;
+          position: relative;
+         left: 25%;
+         top: 0;
+         
+         background-color: black;
+         
+         width: 19em;
+        .modules {
+          border-top:1px solid white;
+          a {
+            color: $color-red;
+          }
+        }
+        }
+        a {
+          padding-left: 0;
+         
+        }
       }
     }
-  }
+
     .mini-nav {
       display: block;
       grid-row: 2/3;
@@ -121,6 +185,7 @@ li {
     &:hover .mini-nav {
       display: none;
     }
+
     &:hover .logo {
       top: 5px;
     }
@@ -139,5 +204,6 @@ li {
         border: 3px solid black;
       }
     }
+
   }
 }

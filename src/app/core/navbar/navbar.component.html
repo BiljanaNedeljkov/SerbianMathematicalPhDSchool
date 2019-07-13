@@ -12,32 +12,46 @@
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active tree">
-          <a class="nav-link" href="#" [routerLink]="['/board']" routerLinkActive="router-link-active">Academics <span
+          <a class="nav-link" href="#" [routerLink]="['/board']" routerLinkActive="router-link-active">Modules <span
               class="sr-only">(current)</span></a>
+
+          <div class="dropdown-content">
+            <div class="analysis modules">
+              <a href="#">Mathematical analysis</a>
+            </div>
+            <div class="algebra modules">
+              <a href="#">Algebra and mathematical logic</a>
+            </div>
+          </div>
+          
         </li>
+
         <li class="nav-item active four">
-          <a class="nav-link" href="#" [routerLink]="['/members']" routerLinkActive="router-link-active">Students <span
+          <a class="nav-link" href="#" [routerLink]="['/members']" routerLinkActive="router-link-active">Lecturers <span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active five">
-          <a class="nav-link" href="#" [routerLink]="['/news']" routerLinkActive="router-link-active">News <span
+          <a class="nav-link" href="#" [routerLink]="['/news']" routerLinkActive="router-link-active">Students<span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active six">
           <a class="nav-link" href="#" [routerLink]="['/membership']" routerLinkActive="router-link-active">
-            Lecturers
+            Students
             <span class="sr-only">(current)</span></a>
         </li>
-
+      
         <li class="nav-item active seven">
-          <a class="nav-link" href="#" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact <span
-              class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#" [routerLink]="['/contact']" routerLinkActive="router-link-active">Institutions
+            <span class="sr-only">(current)</span></a>
         </li>
       </ul>
-      <button class="mini-nav"><h2><i class="fa fa-bars" aria-hidden="true"></i></h2></button>
+      <button class="mini-nav">
+        <h2><i class="fa fa-bars" aria-hidden="true"></i></h2>
+      </button>
       <div class="logo">
         <img src="../../../assets/images/logo2.png" alt="logo">
       </div>
-     
+
     </nav>
   </div>
+</div>
