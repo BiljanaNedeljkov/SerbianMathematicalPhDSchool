@@ -12,36 +12,37 @@
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active tree">
-          <a class="nav-link" href="#" [routerLink]="['/board']" routerLinkActive="router-link-active">Modules <span
+          <a class="nav-link" href="#" >Modules <span
               class="sr-only">(current)</span></a>
+          <h3> <i class="fa fa-angle-right" aria-hidden="true"></i></h3>
 
           <div class="dropdown-content">
             <div class="analysis modules">
-              <a href="#">Mathematical analysis</a>
+              <a href="#"  [routerLink]="['/analysis']"  routerLinkActive="router-link-active">Mathematical analysis</a>
             </div>
             <div class="algebra modules">
-              <a href="#">Algebra and mathematical logic</a>
+              <a href="#" [routerLink]="['/algebra']" routerLinkActive="router-link-active" > Algebra and mathematical logic</a>
             </div>
           </div>
-          
+
         </li>
 
         <li class="nav-item active four">
-          <a class="nav-link" href="#" [routerLink]="['/members']" routerLinkActive="router-link-active">Lecturers <span
+          <a class="nav-link" href="#" [routerLink]="['/lecturers']" routerLinkActive="router-link-active">Lecturers <span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active five">
-          <a class="nav-link" href="#" [routerLink]="['/news']" routerLinkActive="router-link-active">Students<span
+          <a class="nav-link" href="#" [routerLink]="['/students']" routerLinkActive="router-link-active">Students<span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active six">
-          <a class="nav-link" href="#" [routerLink]="['/membership']" routerLinkActive="router-link-active">
-            Students
+          <a class="nav-link" href="#" [routerLink]="['/useful']" routerLinkActive="router-link-active">
+            Useful
             <span class="sr-only">(current)</span></a>
         </li>
-      
+
         <li class="nav-item active seven">
-          <a class="nav-link" href="#" [routerLink]="['/contact']" routerLinkActive="router-link-active">Institutions
+          <a class="nav-link" href="#" [routerLink]="['/institutions']" routerLinkActive="router-link-active">Institutions
             <span class="sr-only">(current)</span></a>
         </li>
       </ul>

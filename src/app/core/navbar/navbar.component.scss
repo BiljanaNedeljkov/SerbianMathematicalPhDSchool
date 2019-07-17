@@ -17,6 +17,9 @@ ul {
   li {
     padding: .5em;
     text-transform: uppercase;
+    h3 {
+      display: none;
+    }
   }
 
   .one {
@@ -133,36 +136,58 @@ ul {
   nav {
     display: grid;
     grid-template-rows: 40% 60%;
-
     ul {
+      
       display: none;
       border: none;
       grid-row: 2/3;
+      .tree {
+        display: block;
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          left: 103%;
+          top: -14%;
+          background-color:$color-red;
+          width: 19em;
+          background-color:#cc2900;
+  
+          .modules {
+            border: 3px solid $color-red;
+  
+            a {
+              color: white;
+            }
+          }
+        }
+        &:hover .dropdown-content {
+          display: block;
+        }
+      }    
 
       li {
         text-align: center;
-        border-bottom: 1px dotted white;
-        width: 60%;
+        border: 1px solid $color-red;
+        width: 50%;
+        position: relative;
+        margin: .5em;
+        background-color:#cc2900;
 
-        .dropdown-content {
-          // display: block;
-          position: relative;
-         left: 25%;
-         top: 0;
-         
-         background-color: black;
-         
-         width: 19em;
-        .modules {
-          border-top:1px solid white;
-          a {
-            color: $color-red;
-          }
-        }
-        }
         a {
           padding-left: 0;
-         
+
+        }
+
+        h3 {
+          position: relative;
+          display: block;
+
+          i {
+            position: absolute;
+            color: white;
+            right: 1em;
+            top: -1em;
+          }
         }
       }
     }
