@@ -15,6 +15,8 @@ import { ModulesComponent } from './PhD/modules/modules.component';
 import { UsefulComponent } from './PhD/useful/useful.component';
 import { AnalysisComponent } from './PhD/analysis/analysis.component';
 import { AlgebraComponent } from './PhD/algebra/algebra.component';
+import { FormsModule } from '@angular/forms';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -48,6 +50,7 @@ const routes: Routes = [
     AppRoutingModule,
     NgbModule,
     RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

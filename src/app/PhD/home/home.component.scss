@@ -1,0 +1,24 @@
+@import '../../helpers/mixins';
+
+section {
+    padding: 2em;
+    border-bottom: 3px solid $color-red;
+    h1,h2,h3 {
+        font-family: 'Volkhov', serif;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+    ul li {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.5em;
+        a {
+            text-decoration: none;
+            color: $color-red;
+        }
+        & :hover {text-transform: uppercase;
+    }
+    }
+    p {
+        font-size: 1.5em;
+    }
+}

@@ -3,121 +3,121 @@
 .row {
   background-color: $color-red;
   position: relative;
+  margin-bottom: 5em;
 }
 
 nav {
   width: 100%;
-}
 
-ul {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
 
-  li {
-    padding: .5em;
-    text-transform: uppercase;
-    h3 {
-      display: none;
-    }
-  }
-
-  .one {
-    grid-column: 1/2;
-
-    a {
-      padding-left: 1em;
-    }
-  }
-
-  .two {
-    grid-column: 2/3;
-  }
-
-  .tree {
-    grid-column: 3/4;
+  ul {
     display: grid;
-    grid-template-rows: 20% 80%;
-
-
-    .modules {
-      border-top: 2px solid white;
-      width: 19em;
-      text-transform: capitalize;
-    }
-
-    &:hover .dropdown-content {
-      display: block;
-
-    }
-  }
-
-  .four {
-    grid-column: 4/5;
-  }
-
-  .five {
-    grid-column: 5/6;
-  }
-
-  .six {
-    grid-column: 8/9;
-  }
-
-  .seven {
-    grid-column: 9/10;
-  }
-}
-
-.logo {
-  position: absolute;
-  border: 3px solid black;
-  right: 43%;
-  width: 15em;
-
-  img {
-    border: 3px solid #ab170f;
+    grid-template-columns: repeat(12, 1fr);
     width: 100%;
-  }
-}
 
-.fa-bars {
-  color: white;
-}
+    li {
+      padding: .5em;
+      text-transform: uppercase;
 
-.mini-nav {
-  display: none;
-}
+      h3 {
+        display: none;
+      }
+    }
 
+    .one {
+      grid-column: 1/2;
 
-.dropdown-content {
+      a {
+        padding-left: 1em;
+      }
+    }
 
-  background-color: $color-red;
-  display: none;
-  position: absolute;
-  top: 4.5em;
+    .two {
+      grid-column: 2/3;
+    }
 
-  .analysis {
-    padding: 1em;
+    .tree {
+      grid-column: 3/4;
+      display: grid;
+      grid-template-rows: 20% 80%;
+      .dropdown-content {
+        background-color: $color-red;
+        display: none;
+        position: absolute;
+        top: 4.5em;
+    
+        .analysis {
+          padding: 1em;
+    
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+    
+        .algebra {
+          padding: 1em;
+    
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
 
-    a {
-      color: white;
-      text-decoration: none;
+      .modules {
+        border-top: 2px solid white;
+        width: 19em;
+        text-transform: capitalize;
+      }
+
+      &:hover .dropdown-content {
+        display: block;
+
+      }
+    }
+
+    .four {
+      grid-column: 4/5;
+    }
+
+    .five {
+      grid-column: 5/6;
+    }
+
+    .six {
+      grid-column: 8/9;
+    }
+
+    .seven {
+      grid-column: 9/10;
     }
   }
 
-  .algebra {
-    padding: 1em;
+  .logo {
+    position: absolute;
+    border: 3px solid black;
+    right: 43%;
+    width: 15em;
 
-    a {
-      color: white;
-      text-decoration: none;
+    img {
+      border: 3px solid #ab170f;
+      width: 100%;
     }
   }
-}
 
+  .fa-bars {
+    color: white;
+  }
+
+  .mini-nav {
+    display: none;
+  }
+
+}
 
 @include tablet {
+  nav {
   .logo {
     right: 2em;
     top: -200%;
@@ -131,39 +131,42 @@ ul {
     grid-column: 7/8;
   }
 }
-
+}
 @include mobile {
   nav {
     display: grid;
     grid-template-rows: 40% 60%;
+
     ul {
-      
       display: none;
       border: none;
       grid-row: 2/3;
+
       .tree {
         display: block;
+
         .dropdown-content {
           display: none;
           position: absolute;
           left: 103%;
           top: -14%;
-          background-color:$color-red;
+          background-color: $color-red;
           width: 19em;
-          background-color:#cc2900;
-  
+          background-color: black;
+
           .modules {
             border: 3px solid $color-red;
-  
+
             a {
               color: white;
             }
           }
         }
+
         &:hover .dropdown-content {
           display: block;
         }
-      }    
+      }
 
       li {
         text-align: center;
@@ -171,7 +174,7 @@ ul {
         width: 50%;
         position: relative;
         margin: .5em;
-        background-color:#cc2900;
+        background-color: black;
 
         a {
           padding-left: 0;
