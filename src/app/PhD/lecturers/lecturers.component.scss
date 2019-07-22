@@ -3,7 +3,7 @@
 section {
   display: grid;
   grid-template-columns: 25% 75%;
-  grid-template-rows: 5% 5% 90%;
+  grid-template-rows: 8em 8em 90%;
 
 
   button {
@@ -38,6 +38,39 @@ section {
 
   }
 
+  .gridLecturersAlg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    padding: 1em;
+
+    .alg {
+      border: 2px solid black;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      background-color: #262626;
+      padding: 1em;
+      height: 12em;
+
+      a {
+        grid-column: 2/3;
+        color: $color-red;
+        font-size: 1.5em;
+        padding-top: 2em;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+
+      }
+    }
+
+  }
+
   .gridLecturers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -68,33 +101,78 @@ section {
 
       }
     }
-    .alg {
-        border: 2px solid black;
-        display: grid;
-        grid-template-columns: 40% 60%;
-        background-color: #262626;
-        padding: 1em;
-        height: 12em;
-  
-        a {
-          grid-column: 2/3;
-          color: $color-red;
-          font-size: 1.5em;
-          padding-top: 2em;
-        }
-  
-        img {
-          width: 100%;
-          height: 100%;
-          border: 1px solid white;
-  
-        }
-      }
+
     .Rajter {
       img {
         width: 80%;
       }
     }
-   
+
+  }
+}
+
+@include tablet {
+  section {
+    .gridLecturers {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(20, 1fr);
+    }
+  }
+}
+
+@include mobile {
+  section {
+    grid-template-columns: 100%;
+    grid-template-rows: 6em 6em 90%;
+
+    .gridLecturers {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(39, 1fr);
+
+      .anaLy {
+        display: block;
+        height: 6em;
+
+        a {
+          grid-column: 1/2;
+          padding-top: 0;
+        }
+
+        img {
+          display: none;
+
+        }
+      }
+    }
+
+    .gridLecturersAlg {
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(21, 1fr);
+
+
+      .alg {
+        display: block;
+        height: 6em;
+
+        a {
+          grid-column: 1/3;
+          padding-top: 0em;
+        }
+
+        img {
+          display: none;
+        }
+      }
+    }
+
+    #analysisText {
+      grid-column: 1/2;
+      grid-row: 3/42;
+    }
+
+    #algebraText {
+      grid-column: 1/2;
+      grid-row: 3/21;
+    }
   }
 }
