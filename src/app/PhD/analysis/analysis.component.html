@@ -1,5 +1,6 @@
 <div class="container-fluid">
-  <h1>The 2019/20 academic year will start with the following courses:</h1>
+  <h1>
+      Module: Analysis</h1>
   <form>
     <div class="form-group form-inline">
       <h4>Search: </h4><input class="form-control ml-4" type="text" [formControl]="filter" />
@@ -8,8 +9,6 @@
 
   <table class="table table-striped">
     <thead>
-      <tr>
-        <!-- <th> PhD School of Mathematic, module: Analysis</th> -->
       <tr>
         <th>No</th>
         <th scope="col">Course</th>
@@ -20,7 +19,7 @@
         <th scope="col" class="hidden">Course instructor</th>
         <th scope="col" class="hidden">Classes per week</th>
         <th scope="col" class="hidden">ECTS
-      </tr>
+          </tr>
     </thead>
     <tbody>
       <tr *ngFor="let nesto of members$ | async; index as i">

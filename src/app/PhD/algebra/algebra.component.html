@@ -1,1 +1,50 @@
-<p>algebra works!</p>
+<div class="container-fluid">
+        <h1>Module: Alebra and mathematical logic</h1>
+        <form>
+          <div class="form-group form-inline">
+            <h4>Search: </h4><input class="form-control ml-4" type="text" [formControl]="filter" />
+          </div>
+        </form>
+      
+        <table class="table table-striped">
+          <thead>
+          <tr>
+              <th>No</th>
+              <th scope="col">Course</th>
+              <th scope="col" class="hidden">Semester
+              </th>
+              <th scope="col">Compulsory / optionally
+              </th>
+              <th scope="col" class="hidden">Course instructor</th>
+              <th scope="col" class="hidden">Classes per week</th>
+              <th scope="col" class="hidden">ECTS
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let nesto of members$ | async; index as i">
+              <th scope="row">{{i+1}}</th>
+              <td class="hidden">
+                <ngb-highlight [result]="nesto.course" [term]="filter.value">{{nesto.course}}</ngb-highlight>
+              </td>
+              <td>
+                <ngb-highlight [result]="nesto.semester" [term]="filter.value">{{nesto.semester}}</ngb-highlight>
+              </td>
+              <td>
+                <ngb-highlight [result]="nesto.compulsory" [term]="filter.value">{{nesto.compulsory}}</ngb-highlight>
+              </td>
+              <td class="hidden">
+                <ngb-highlight [result]="nesto.instructor" [term]="filter.value">{{nesto.instructor}}</ngb-highlight>
+              </td>
+              <td class="hidden">
+                <ngb-highlight [result]="nesto.cpw" [term]="filter.value">{{nesto.cpw}}</ngb-highlight>
+              </td>
+              <td>
+                <ngb-highlight [result]="nesto.ects" [term]="filter.value">{{nesto.ects}}</ngb-highlight>
+              </td>
+            </tr>
+          </tbody>
+         
+        </table>
+        <p>*student has to take and pass two of these five optional courses</p>
+      </div>
+      
