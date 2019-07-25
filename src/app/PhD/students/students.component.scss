@@ -1,0 +1,64 @@
+@import '../../helpers/mixins';
+
+.container-fluid {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 20% 60% 20%;
+  font-family: 'DM Serif Text', serif;
+
+  ngb-carousel {
+    background-color: $dark-grey;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 20em;
+    position: relative;
+
+    img {
+      width: 30%;
+      height: 20em;
+      padding: 2em;
+    }
+
+    p {
+      position: absolute;
+      left: 30%;
+      top: 0;
+      padding: 2em;
+      color: $color-red;
+      font-size: 1.2em;
+    }
+
+    a {
+      color: $color-red;
+    }
+  }
+
+  h1 {
+    grid-column: 2/3;
+    text-align: center;
+    color: $color-red;
+  }
+  .modal-header{
+      
+  }
+}
+
+@include mobile {
+  .container-fluid {
+
+    ngb-carousel {
+        grid-column: 1/4;
+
+    p {
+        left: 0;
+        font-size: 1em;
+        display: none;
+    }
+    img{
+        width: 60%;
+        position: relative;
+        left: 20%;
+    }
+  }
+}
+}

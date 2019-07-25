@@ -1,4 +1,10 @@
+@import '../../helpers/mixins';
+
 .container-fluid{
+    h1{
+        font-family: 'Patua One', cursive;
+        
+    }
     form {
         padding: 2em;
         input{
@@ -6,3 +12,20 @@
         }
     }
 }
+@include mobile {
+    .container-fluid{
+        h1 {
+            text-align: center;
+        }
+        form{
+            h4{
+                display: none;
+            }
+            input{
+                width: 90%;
+            }
+        }
+    }
+
+}
+
