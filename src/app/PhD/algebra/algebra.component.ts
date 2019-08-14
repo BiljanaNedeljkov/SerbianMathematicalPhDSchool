@@ -19,7 +19,7 @@ interface Algebra {
 };
 
 const Algebra: Algebra[] = [
-  {"course": "Mathematical logic", "semester": "First", "compulsory": "Compulsory", "instructor": "Silvia Ghilezan, Yoran Petrić", "cpw": 4, "ects": 15},
+  {"course": "Mathematical logic", "semester": "First", "compulsory": "Compulsory", "instructor": "Silvia Ghilezan, Zoran Petrić", "cpw": 4, "ects": 15},
   {"course": "General algebra", "semester": "Second", "compulsory": "Compulsory", "instructor": "Miroslav Ćirić , Andreja Tepavčević", "cpw": 4, "ects": 15},
   {"course": "Study work 1", "semester": "First", "compulsory": "Compulsory", "instructor": "Anyone from the List of Algebra and mathematical logic instructors", "cpw": 12, "ects": 5},
   {"course": "Study work 2", "semester": "Second", "compulsory": "Compulsory", "instructor": "Anyone from the List of Algebra and mathematical logic instructors", "cpw": 12, "ects": 5},

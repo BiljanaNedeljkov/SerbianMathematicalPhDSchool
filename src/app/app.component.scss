@@ -5,12 +5,20 @@
   color: white;
   padding: 2em;
   height: 8em;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  h3 {
+    opacity: .5;
+  }
 }
 
 @include tablet {
   .phd {
     height: 10em;
     padding-top: 4em;
+    h3 {
+      display: none;
+    }
   }
 }
 
