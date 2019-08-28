@@ -1,30 +1,87 @@
+@import '../../helpers/mixins';
 
+.container-fluid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
 
+  .institutions {
+    box-sizing: border-box;
+    height: 30em;
 
-.container-fluid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-gap: 10px;
+    a {
+      position: relative;
+      top: -4em;
+      color: white;
+
+      h5 {
+        padding: 1em;
+        background-color: #262626;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      width: 7%;
+      height: 10%;
+      opacity: .5;
+      padding: .5em;
+    }
+
+    .mi {
+      left: 43%;
+      border-radius: 50%;
+    }
+
+    .dmi {
+      right: 10px;
+      border-radius: 50%;
+    }
+
+    .pmfnis {
+      left: 43%;
+    }
+
+    .pmfkg {
+      right: 10px;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+
+    .npazar {
+      border-radius: 50%;
+      left: 43%;
+
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logoPhD {
+    opacity: .3;
+  }
+
+}
+
+@include mobile {
+  .container-fluid {
+    display: block;
+    grid-gap: 0;
+
     .institutions {
-        box-sizing: border-box;
-        height: 30em;
-        a {
-            position: relative;
-            top: -4em;
-            color: white;
-            h5 {
-                padding: 1em;
-                background-color:#262626;
-            }
-        }
-    }
-    img {
-        width: 100%;
-        height: 100%;
-    }
-    .logo{
-        opacity: .3;
-    }
+      margin-bottom: 20px;
 
+      .logo {
+        display: none;
+      }
+
+      h5 {
+        text-align: center;
+      }
+    }
+  }
 }

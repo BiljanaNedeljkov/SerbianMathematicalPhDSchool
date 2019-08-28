@@ -1,24 +1,193 @@
 @import '../../helpers/mixins';
 
 section {
-    padding: 2em;
-    border-bottom: 3px solid $color-red;
-    h1,h2,h3 {
-        font-family: 'Volkhov', serif;
-        text-align: center;
-        padding-bottom: 1em;
+  padding: 2em;
+  border-bottom: 3px solid $color-red;
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Volkhov', serif;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  ul li {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5em;
+
+    a {
+      text-decoration: none;
+      color: $color-red;
     }
-    ul li {
-        font-family: 'Rubik', sans-serif;
-        font-size: 1.5em;
-        a {
-            text-decoration: none;
-            color: $color-red;
+
+    & :hover {
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  &:nth-child(1) {
+    img {
+      position: absolute;
+      left: 70%;
+      top: 48%;
+    }
+  }
+
+  &:nth-child(2) {
+    height: 50em;
+
+    ngb-carousel {
+      height: 30em;
+      position: relative;
+
+      ng-template {
+        .modal-body {
+          background-color: $color-red;
+          color: white;
         }
-        & :hover {text-transform: uppercase;
+      }
+
+      img {
+        width: 100%;
+        height: 35em;
+        padding: 2em;
+      }
+
+      p {
+        position: absolute;
+        left: 70%;
+        top: 0;
+        padding: 2em;
+        color: $color-red;
+        font-size: 3em;
+      }
+
+      a {
+        color: $color-red;
+      }
+
+      .carousel-caption {
+        width: 50%;
+        position: relative;
+        right: 0;
+        margin-left: 0;
+
+      }
+
+      .btn-danger {
+        position: absolute;
+        top: 0;
+      }
+
+      h3 {
+        button {
+          position: absolute;
+          top: -50px;
+        }
+      }
     }
+
+    h1 {
+      grid-column: 2/3;
+      text-align: center;
+      color: $color-red;
     }
-    p {
-        font-size: 1.5em;
+
+  }
+
+  &:nth-child(3) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: $dark-grey;
+    color: $color-red;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+
+    .fa {
+      padding: .5em;
     }
+
+  }
+}
+
+@include tablet {
+  section {
+    &:nth-child(1) {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mobile {
+  section {
+    &:nth-child(2) {
+      height: 40em;
+
+      ngb-carousel {
+        height: 30em;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 25em;
+
+        }
+
+        p {
+          position: absolute;
+          left: 60%;
+          top: 0;
+          padding: 2em;
+          color: $color-red;
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+
+        a {
+          color: $color-red;
+        }
+
+        .carousel-caption {
+          width: 50%;
+          position: relative;
+          right: 0;
+          margin-left: 0;
+
+        }
+
+        .btn-danger {
+          position: absolute;
+          top: 0;
+        }
+
+        h3 {
+          button {
+            position: absolute;
+            top: -50px;
+          }
+        }
+      }
+
+      h1 {
+        grid-column: 2/3;
+        text-align: center;
+        color: $color-red;
+      }
+
+    }
+
+    &:nth-child(3) {
+      display: block;
+      .zoom {
+        display: none;
+      }
+    }
+  }
 }

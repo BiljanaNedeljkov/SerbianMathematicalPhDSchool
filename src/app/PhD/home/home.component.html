@@ -1,49 +1,289 @@
 <section>
-        <h1>Welcome to the official presentation of the PhD School of Mathematics</h1>
-      
-      
-      
-        <h3> PhD School of Mathematics is a joint PhD program in mathematics, which is realized by the following institutions:
-        </h3>
-        <ul>
-          <li><a href="http://www.mi.sanu.ac.rs/"><b> Mathematical Institute of the Serbian Academy of Sciences and Arts</b></a></li>
-          <li><a href="https://www.dmi.uns.ac.rs/en"><b>University of Novi Sad, Faculty of Sciences and Mathematics</b> </a></li>
-          <li><a href="http://wpresspmf.pmf.ni.ac.rs/?lang=en"><b>University  of Nis, Faculty of Sciences and Mathematics</b></a></li>
-          <li> <a href="https://www.pmf.kg.ac.rs/"><b>University of Kragujevac, Faculty of Sciences and Mathematics</b></a></li>
-          <li><a href="http://www.np.ac.rs/en"><b>State University of Novi Pazar</b></a></li>
-        </ul>
-        <p>
-          The study program has been approved by the <b> Commission for Accreditation and Quality Assurance </b>on June 10,
-          2016.<br>
-      
-          The program will be realized in English, including all courses and the PhD theses.<br>
-      
-          The first generation of students is expected in 2016/17 academic year, and the instructions for applications will be
-          announced in September or October 2016.
-        </p>
-      
-        <h3> Students will be able to choose one of two modules:</h3>
-          <ul>
-            <li>Analysis</li>
-            <li>Algebra and mathematical logic</li>
-          </ul>
+  <!-- <img src="../../../assets/images/flag.jpeg" alt="flag"> -->
+  <h1>Welcome to the official presentation of the PhD School of Mathematics</h1>
+  <h3> PhD School of Mathematics is a joint PhD program in mathematics, which is realized by the following institutions:
+  </h3>
+  <ul>
+    <li><a href="http://www.mi.sanu.ac.rs/"><b> Mathematical Institute of the Serbian Academy of Sciences and
+          Arts</b></a></li>
+    <li><a href="https://www.dmi.uns.ac.rs/en"><b>University of Novi Sad, Faculty of Sciences and Mathematics</b> </a>
+    </li>
+    <li><a href="http://wpresspmf.pmf.ni.ac.rs/?lang=en"><b>University of Nis, Faculty of Sciences and
+          Mathematics</b></a></li>
+    <li> <a href="https://www.pmf.kg.ac.rs/"><b>University of Kragujevac, Faculty of Sciences and Mathematics</b></a>
+    </li>
+    <li><a href="http://www.np.ac.rs/en"><b>State University of Novi Pazar</b></a></li>
+  </ul>
+  <p>
+    The study program has been approved by the <b> Commission for Accreditation and Quality Assurance </b>on June 10,
+    2016.<br>
+
+    The program will be realized in English, including all courses and the PhD theses.<br>
+
+    The first generation of students is expected in 2016/17 academic year, and the instructions for applications will be
+    announced in September or October 2016.
+  </p>
+
+  <h3> Students will be able to choose one of two modules:</h3>
+  <ul>
+    <li>Analysis</li>
+    <li>Algebra and mathematical logic</li>
+  </ul>
+
+
+  
+</section>
+<section>
+  <div class="cityes">
+    <h2>Our students can choose the city</h2>
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <img src="../../../assets/images/belgrade.jpg" alt="Random first slide">
+        <p>Belgrade</p>
+        <div class="carousel-caption">
+          <h3>
+            <ng-template #content let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title">Modal title3</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">Close</button>
+              </div>
+            </ng-template>
+
+            <ng-template #longContent let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title">About Belgrade</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Belgrade (/ˈbɛlɡreɪd/ BEL-grayd; Serbian: Beograd / Београд, lit. 'White City', pronounced [beǒɡrad] (About this soundlisten); names in other languages) is the capital and largest city of Serbia. It is located at the confluence of the Sava and Danube rivers and the crossroads of the Pannonian Plain and the Balkan Peninsula.[7] The urban area of Belgrade has a population of 1.23 million, while within administrative limits of the City of Belgrade (which encompasses almost all of its metropolitan area) live nearly 1.7 million people, a quarter of total population of Serbia.[4]
+
+                    One of the most important prehistoric cultures of Europe, the Vinča culture, evolved within the Belgrade area in the 6th millennium BC. In antiquity, Thraco–Dacians inhabited the region and, after 279 BC, Celts settled the city, naming it Singidūn.[8] It was conquered by the Romans under the reign of Augustus and awarded Roman city rights in the mid-2nd century.[9] It was settled by the Slavs in the 520s, and changed hands several times between the Byzantine Empire, the Frankish Empire, the Bulgarian Empire and the Kingdom of Hungary before it became the seat of the Serbian king Stefan Dragutin in 1284. In 1521, Belgrade was conquered by the Ottoman Empire and became the seat of the Sanjak of Smederevo.[10] It frequently passed from Ottoman to Habsburg rule, which saw the destruction of most of the city during the Austro-Ottoman wars. Belgrade was again named the capital of Serbia in 1841. Northern Belgrade remained the southernmost Habsburg post until 1918, when the city was reunited. In a fatally strategic position, the city was battled over in 115 wars and razed 44 times.[11] Belgrade was the capital of Yugoslavia from its creation in 1918 to its dissolution in 2006.
+                    
+                    Being Serbia's primate city, Belgrade has special administrative status within Serbia.[12] It is the seat of the central government, administrative bodies, and government ministries, as well as home of almost all of the largest Serbian companies, media, and scientific institutions. Belgrade is classified as a Beta-Global City.[13]</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+              </div>
+            </ng-template>
+            <button class="btn btn-danger more mb-2 mr-2" (click)="openScrollableContent(longContent)">Click to see
+              more info!
+            </button>
+          </h3>
+
+        </div>
+      </ng-template>
+
+
+
+      <ng-template ngbSlide>
+        <img src="../../../assets/images/novisad.jpg" alt="Random second slide">
+        <p>Novi Sad</p>
+        <div class="carousel-caption">
+          <h3>
+            <ng-template #content let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title">Modal title</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+              </div>
+            </ng-template>
+
+            <ng-template #longContent let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title">About Novi Sad</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Novi Sad (Serbian Cyrillic: Нови Сад, pronounced [nôʋiː sâːd] (About this soundlisten); Hungarian: Újvidék [ˈuːjvideːk]; see below for other names) is the second largest city in Serbia, the capital of the autonomous province of Vojvodina and the administrative centre of the South Bačka District. It is located in the southern portion of the Pannonian Plain on the border of the Bačka and Srem geographical regions. Lying on the banks of the Danube river, the city faces the northern slopes of Fruška Gora.
+
+                    According to the 2011 census, Novi Sad proper has a population of 250,439,[2] while the entire urban area of Novi Sad (with the adjacent urban settlements of Petrovaradin and Sremska Kamenica) comprises 277,522 inhabitants. The population of the administrative area of the city, which includes its suburbs, totals 341,625 people.[3]
+                    
+                    Novi Sad was founded in 1694 when Serb merchants formed a colony across the Danube from the Petrovaradin Fortress, a strategic Habsburg military post. In the following centuries, it transformed into an important trading and manufacturing centre as well as a centre of Serbian culture, earning it the nickname Serbian Athens.[4][5] The city was heavily devastated in the 1848 Revolution, but was subsequently rebuilt and restored. Today, along with the Serbian capital city of Belgrade, Novi Sad is an industrial and financial centre important to the Serbian economy.
+                    
+                    Novi Sad was selected to be the European Youth Capital for the year 2019 and the European Capital of Culture for the year 2021.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+              </div>
+            </ng-template>
+            <button class="btn btn-danger mb-2 mr-2" (click)="openScrollableContent(longContent)">Click to see
+              more info!
+            </button>
+          </h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="../../../assets/images/nis.jpg" alt="Random third slide">
+        <p>Niš</p>
+        <div class="carousel-caption">
+          <h3>
+            <ng-template #content let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title">Modal title</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+              </div>
+            </ng-template>
+
+            <ng-template #longContent let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title">About Niš</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Niš (Serbian Cyrillic: Ниш, pronounced [nîːʃ] (About this soundlisten); names in other languages) is the third largest city in Serbia and the administrative center of the Nišava District. According to the 2011 census, the urban area has a population of 187,544, while its administrative area has a population of 260,237 inhabitants.
+
+                    Niš has long been a crossroads between East and West. Founded by the Celtic Scordisci in 279 BC, the city would serve as the birthplace of three Roman emperors: Constantine the Great, the first Christian emperor and the founder of Constantinople; Constantius III; and Justin I. Later playing a prominent role in the history of the Byzantine Empire, the city's past would earn it the nickname The Emperor's City.[5][6]
+                    
+                    After about 400 years of Ottoman rule, the city was liberated in 1878 and became part of the Principality of Serbia, though not without great bloodshed—remnants of which can be found throughout the city. Today, Niš is one of the most important economic centers in Serbia, especially in the electronics, mechanical engineering, textile, and tobacco industries. Constantine the Great Airport is Niš's international airport.
+                    
+                    In 2013, the city was host to the celebration of 1700 years of Constantine's Edict of Milan.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+              </div>
+            </ng-template>
+            <button class="btn btn-danger mb-2 mr-2" (click)="openScrollableContent(longContent)">Click to see
+              more info!</button>
+          </h3>
+        </div>
+      </ng-template>
+
       
         
-        <!-- <div class="questions">
+        <ng-template ngbSlide>
+            <img src="../../../assets/images/kragujevac.jpg" alt="Random second slide">
+            <p>Kragujevac</p>
+            <div class="carousel-caption">
+              <h3>
+                <ng-template #content let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title">Modal title</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                  </div>
+                </ng-template>
+    
+                <ng-template #longContent let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title">About Kragujevac</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Kragujevac (Serbian Cyrillic: Крагујевац) is the fourth largest city in Serbia and the administrative centre of the Šumadija District. It is the historical centre of the once densely-forested region of Šumadija in central Serbia, and is situated on the banks of the Lepenica River. According to the 2011 census, the city proper has a population of 150,835, while its administrative area comprises a total of 179,417 inhabitants.
+
+                        Kragujevac was the first capital of modern Serbia and the first constitution in the Balkans, the Sretenje Constitution, was proclaimed in the city in 1838. During the Second World War, Kragujevac was the site of a massacre by the Nazis in which 2,778 Serb men and boys were killed.
+                        
+                        Modern Kragujevac is known for its large munitions (Zastava Arms) and automobile (FCA Srbija) industries, as well as its status as an education centre housing the University of Kragujevac, one of the region's largest higher education institutions.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                  </div>
+                </ng-template>
+                <button class="btn btn-danger mb-2 mr-2" (click)="openScrollableContent(longContent)">Click to see
+                  more info!
+                </button>
+              </h3>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../../assets/images/novi_pazar_300517_tw630.jpg" alt="Random third slide">
+            <p>Novi Pazar</p>
+            <div class="carousel-caption">
+              <h3>
+                <ng-template #content let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title">Modal title</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                  </div>
+                </ng-template>
+    
+                <ng-template #longContent let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title">About Novi Pazar</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Novi Pazar (Serbian Cyrillic: Нови Пазар, lit. "New Bazaar" ) is a city located in the Sandžak District of southwestern Serbia and Montenegro. As of the 2011 census, the urban area has 66,527 inhabitants, while the city administrative area has 100,410 inhabitants.[3] The city is the cultural center of the Bosniaks in Serbia and the historical region of Sandžak.[4] A multicultural area of Muslims and Orthodox Christians, many monuments of both religions, like the Altun-Alem Mosque and the Church of the Holy Apostles Peter and Paul, are found in the region.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                  </div>
+                </ng-template>
+                <button class="btn btn-danger mb-2 mr-2" (click)="openScrollableContent(longContent)">Click to see
+                  more info!</button>
+              </h3>
+            </div>
+          </ng-template>
+    </ngb-carousel>
+
+  </div>
+</section>
+<section> 
+  <div class="contact">
+      <h1>Serbian mathematical PhD School</h1>
+      <div class="questions">
           <h4>All questions should be sent to any of the following persons in charge:</h4>
       
           <h5>Head:<br>
-            Stevan Pilipović <i class="fa fa-envelope-o" aria-hidden="true"></i>stevan.pilipovic@gmail.com</h5>
+            Stevan Pilipović <br><i class="fa fa-envelope-o" aria-hidden="true"></i><a [href]="emailstring" target="_top" >stevan.pilipovic@gmail.com</a> </h5>
       
           <h5> Deputies:<br>
-            Zoran Ognjanović <i class="fa fa-envelope-o" aria-hidden="true"></i>zorano@mi.sanu.ac.rs</h5>
+            Zoran Ognjanović <br><i class="fa fa-envelope-o" aria-hidden="true"></i>zorano@mi.sanu.ac.rs</h5>
       
-          <h5>Dragan Đorđević <i class="fa fa-envelope-o" aria-hidden="true"></i>dragandjordjevic70@gmail.com</h5>
+          <h5>Dragan Đorđević<br> <i class="fa fa-envelope-o" aria-hidden="true"></i>dragandjordjevic70@gmail.com</h5>
       
           <h5>Secretary:<br>
-            Miljana Jovanović <i class="fa fa-envelope-o" aria-hidden="true"></i>mima@pmf.ni.ac.rs</h5>
-        </div> -->
-      </section>
-      <section>
-      
-      </section>
+            Miljana Jovanović <br><i class="fa fa-envelope-o" aria-hidden="true"></i>mima@pmf.ni.ac.rs</h5>
+        </div>
+  </div>
+  
+  <img  class="zoom" src="../../../assets/images/worldmaps.png" alt="worldmaps">
+</section>

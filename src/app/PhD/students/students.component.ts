@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { NgbModal, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -12,7 +12,7 @@ export class StudentsComponent {
   closeResult: string;
 
   constructor(private modalService: NgbModal, config: NgbCarouselConfig) {
-    config.interval = 2000;
+    config.interval = 3000;
     config.wrap = true;
     config.keyboard = true;
     config.pauseOnHover = true;

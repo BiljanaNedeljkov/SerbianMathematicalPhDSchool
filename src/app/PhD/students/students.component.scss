@@ -2,41 +2,49 @@
 
 .container-fluid {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 20% 60% 20%;
-  font-family: 'DM Serif Text', serif;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 15% 80% 5%;
+  font-family: 'Noto Sans KR', sans-serif;
+
 
   ngb-carousel {
-    background-color: $dark-grey;
+    // background-color: $dark-grey;
     grid-column: 2/3;
     grid-row: 2/3;
-    height: 20em;
+    height: 100%;
     position: relative;
+    margin-bottom: 2em;
+    background-color: #cccccc;
+    padding: 4em;
 
     img {
       width: 30%;
-      height: 20em;
-      padding: 2em;
+      height: 18em;
     }
 
     p {
       position: absolute;
-      left: 30%;
+      left: 32%;
       top: 0;
-      padding: 2em;
-      color: $color-red;
+      font-weight: bold;
       font-size: 1.2em;
     }
 
-    a {
-      color: $color-red;
+    .carousel-caption {
+      h3 {
+        button {
+          position: absolute;
+          padding: 1em;
+
+        }
+      }
     }
   }
 
   h1 {
     grid-column: 2/3;
     text-align: center;
-    color: $color-red;
+
   }
 }
 
@@ -44,17 +52,28 @@
   .container-fluid {
 
     ngb-carousel {
-        grid-column: 1/4;
+      grid-column: 1/4;
 
-    p {
+      p {
         left: 0;
         font-size: 1em;
         display: none;
-    }
-    img{
+      }
+
+      img {
         width: 60%;
         position: relative;
         left: 20%;
+      }
+    
+    .carousel-caption {
+      h3 {
+        button {
+          padding: 0.2em;
+          left: 15px;;
+
+        }
+      }
     }
   }
 }
