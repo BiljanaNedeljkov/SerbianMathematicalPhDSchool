@@ -143,13 +143,13 @@ nav {
     margin-bottom: 2em;
   }
   nav {
-    display: grid;
-    grid-template-rows: 40% 60%;
+    display: flex;
+    flex-direction: column;
 
     ul {
       display: none;
       border: none;
-      grid-row: 2/3;
+     
 
       .tree {
         display: block;
@@ -208,11 +208,11 @@ nav {
       display: block;
       grid-row: 2/3;
       width: 20%;
-      position: relative;
-      top: 70px;
+      // position: relative;
+      // top: 70px;
       background-color: $color-red;
       border: 0;
-      left: 40%;
+      // left: 40%;
     }
 
     &:hover ul {
@@ -223,9 +223,7 @@ nav {
       display: none;
     }
 
-    &:hover .logo {
-      top: 5px;
-    }
+    
 
     .logo {
       position: relative;
@@ -235,6 +233,7 @@ nav {
       height: 20em;
       border: none;
       grid-row: 1/2;
+      display: none;
 
       img {
         height: 20em;

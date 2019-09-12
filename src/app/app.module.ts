@@ -17,6 +17,7 @@ import { AnalysisComponent } from './PhD/analysis/analysis.component';
 import { AlgebraComponent } from './PhD/algebra/algebra.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 const routes: Routes = [
@@ -56,7 +57,7 @@ const routes: Routes = [
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

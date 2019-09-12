@@ -12,6 +12,7 @@
     grid-column: 1/2;
     text-align: center;
     font-weight: bolder;
+    padding-top: 3em;
   }
 
 
@@ -52,6 +53,10 @@
   }
 
   .about {
+    h2 {
+      font-family: 'Chilanka', cursive;
+    }
+
     grid-row: 1/4;
     grid-column: 2/3;
     padding: 2em;
